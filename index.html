@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Truth · 我爱真理</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body class="is-preload">
+    <div id="app">
+      <!-- Wrapper -->
+      <div id="wrapper">
+        <!-- Main -->
+        <div id="main">
+          <div class="inner">
+            <!-- Header -->
+            <header id="header">
+              <a href="index.html" class="logo"
+                ><strong>想要你知</strong>&nbsp;&nbsp;我们的信仰有多美</a
+              >
+              <ul class="icons">
+                <li>
+                  <a href="#" class="icon solid fa-envelope"
+                    ><span class="label">Email</span></a
+                  >
+                </li>
+                <!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											  <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+											  <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											  <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
+              </ul>
+            </header>
+
+            <!-- Banner -->
+            <section id="banner">
+              <div class="content">
+                <header>
+                  <h1>
+                    Hi, 很高兴可以<br />
+                    在这里认识你
+                  </h1>
+                  <p>{{dataList.banner_title}}</p>
+                </header>
+                <p>{{dataList.banner_content}}</p>
+                <ul class="actions">
+                  <li>
+                    <a :href="dataList.banner_url" class="button big"
+                      >了解更多</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <span class="image object">
+                <img :src="dataList.banner_img" alt="" />
+              </span>
+            </section>
+
+            <!-- Section -->
+            <!-- <section>
+										  <header class="major">
+											  <h2>Erat lacinia</h2>
+										  </header>
+										  <div class="features">
+											  <article>
+												  <span class="icon fa-gem"></span>
+												  <div class="content">
+													  <h3>Portitor ullamcorper</h3>
+													  <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												  </div>
+											  </article>
+											  <article>
+												  <span class="icon solid fa-paper-plane"></span>
+												  <div class="content">
+													  <h3>Sapien veroeros</h3>
+													  <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												  </div>
+											  </article>
+											  <article>
+												  <span class="icon solid fa-rocket"></span>
+												  <div class="content">
+													  <h3>Quam lorem ipsum</h3>
+													  <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												  </div>
+											  </article>
+											  <article>
+												  <span class="icon solid fa-signal"></span>
+												  <div class="content">
+													  <h3>Sed magna finibus</h3>
+													  <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
+												  </div>
+											  </article>
+										  </div>
+									  </section> -->
+
+            <!-- Section -->
+            <section>
+              <header class="major">
+                <h2>更多视频</h2>
+              </header>
+              <div class="posts">
+                <article>
+                  <a href="#" class="image"
+                    ><img src="images/pic01.jpg" alt=""
+                  /></a>
+                  <h3>Interdum aenean</h3>
+                  <p>
+                    Aenean ornare velit lacus, ac varius enim lorem ullamcorper
+                    dolore. Proin aliquam facilisis ante interdum. Sed nulla
+                    amet lorem feugiat tempus aliquam.
+                  </p>
+                  <ul class="actions">
+                    <li><a href="#" class="button">More</a></li>
+                  </ul>
+                </article>
+                <article>
+                  <a href="#" class="image"
+                    ><img src="images/pic01.jpg" alt=""
+                  /></a>
+                  <h3>Interdum aenean</h3>
+                  <p>
+                    Aenean ornare velit lacus, ac varius enim lorem ullamcorper
+                    dolore. Proin aliquam facilisis ante interdum. Sed nulla
+                    amet lorem feugiat tempus aliquam.
+                  </p>
+                  <ul class="actions">
+                    <li><a href="#" class="button">More</a></li>
+                  </ul>
+                </article>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <div class="inner">
+            <!-- Search -->
+            <section id="search" class="alt">
+              <form method="post" action="#">
+                <input
+                  type="text"
+                  name="query"
+                  id="query"
+                  placeholder="Search"
+                  disabled
+                />
+              </form>
+            </section>
+
+            <!-- Menu -->
+            <nav id="menu">
+              <header class="major">
+                <h2>目录</h2>
+              </header>
+              <ul>
+                <li><a href="index.html">主页</a></li>
+                <!-- <li><a href="generic.html">我爱音乐</a></li> -->
+                <!-- <li><a href="elements.html">Elements</a></li> -->
+                <li>
+                  <span class="opener">字义研读</span>
+                  <ul>
+                    <li>
+                      <a
+                        href="https://vichien-public.oss-cn-guangzhou.aliyuncs.com/xiaoyangzhijia/video/%E5%8A%A8%E7%94%BB/ziYiYanDu/%E5%92%8C%E5%B9%B3%20-%20Shalom.mp4"
+                        >和平 - Peace</a
+                      >
+                    </li>
+                    <li><a href="#">喜乐 - Joy</a></li>
+                    <li><a href="#">爱 - Agape</a></li>
+                    <li><a href="#">盼望 - Hope</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <span class="opener">智慧书</span>
+                  <ul>
+                    <li><a href="#">箴言</a></li>
+                    <li><a href="#">传道书</a></li>
+                    <li><a href="#">约伯记</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <span class="opener">路加福音系列短片</span>
+                  <ul>
+                    <li><a href="#">第一集</a></li>
+                    <li><a href="#">第二集</a></li>
+                    <li><a href="#">第三集</a></li>
+                    <li><a href="#">第四集</a></li>
+                    <li><a href="#">第五集</a></li>
+                  </ul>
+                </li>
+
+                <li><a href="#">圣诞专享 - 我们的爱来了</a></li>
+                <li><a href="#">信仰告白</a></li>
+              </ul>
+            </nav>
+
+            <!-- Section -->
+            <section>
+              <header class="major">
+                <h2>最新发布</h2>
+              </header>
+              <div class="mini-posts">
+                <article v-for="item in dataList.menu_video" key="id">
+                  <a :href="item.url" class="image"
+                    ><img :src="item.img" alt=""
+                  /></a>
+                  <p>{{item.content}}</p>
+                </article>
+              </div>
+              <ul class="actions">
+                <li><a href="#" class="button">更多视频</a></li>
+              </ul>
+            </section>
+
+            <!-- Section -->
+            <section>
+              <header class="major">
+                <h2>联系我们</h2>
+              </header>
+              <p>
+                如果您需要我帮忙祷告，或者想与我分享一些新鲜事的话，随时欢迎联系
+              </p>
+              <ul class="contact">
+                <li class="icon solid fa-envelope">
+                  <a href="#">chuanyangme@gmail.com</a>
+                </li>
+                <!-- <li class="icon solid fa-phone">(000) 000-0000</li>
+											  <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+											  Nashville, TN 00000-0000</li> -->
+              </ul>
+            </section>
+
+            <!-- Footer -->
+            <footer id="footer">
+              <p class="copyright">&copy; Designed by ChuanyangChen.</p>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+  </body>
+</html>
+
+<script>
+  const App = {
+    mounted() {
+      jqueryMain;
+      fetch(
+        "https://console-mock.apipost.cn/app/mock/project/67143e7e-aa2c-45e3-acb6-f5c9aa58d095/app/getIndex"
+      )
+        .then((response) => response.json())
+        .then((json) => {
+          this.dataList = json.data;
+        })
+        .catch((err) => console.log("Request Failed", err));
+    },
+    data() {
+      return {
+        dataList: {},
+      };
+    },
+  };
+
+  Vue.createApp(App).mount("#app");
+</script>
