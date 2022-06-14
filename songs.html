@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>一起赞美</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <base target="_blank" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Main -->
+      <div id="main">
+        <div class="inner">
+          <!-- Header -->
+          <header id="header">
+            <a href="index.html" class="logo"
+              ><strong>想要你知</strong>&nbsp;&nbsp;我们的信仰有多美</a
+            >
+            <ul class="icons">
+              <li>
+                <a
+                  href="mailto:chuanyangme@gmail.com"
+                  class="icon solid fa-envelope"
+                  target="_self"
+                  ><span class="label">Email</span></a
+                >
+              </li>
+              <!-- <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+											  <li><a href="#" class="icon brands fa-snapchat-ghost"><span class="label">Snapchat</span></a></li>
+											  <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+											  <li><a href="#" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li> -->
+            </ul>
+          </header>
+
+          <!-- Banner -->
+          <section id="banner">
+            <div class="content">
+              <header>
+                <h1>
+                  一起歌颂<br />
+                  同心赞美
+                </h1>
+                <p>{{dataList.banner_title}}</p>
+              </header>
+              <p>{{dataList.banner_content}}</p>
+              <!-- <ul class="actions">
+                <li>
+                  <a :href="dataList.banner_url" class="button big">了解更多</a>
+                </li>
+              </ul> -->
+            </div>
+            <span class="image">
+              <img :src="dataList.banner_img" alt="" />
+            </span>
+          </section>
+
+          <!-- Section -->
+          <section>
+            <header class="major">
+              <h2>音乐专栏（建设中）</h2>
+            </header>
+            <div class="features">
+              <article v-for="item in dataList.more_music" key="id">
+                <!-- <span class="icon solid fa-music"></span> -->
+                <div class="content">
+                  <h3>{{item.title}}</h3>
+                  <p>
+                    {{item.content}}
+                  </p>
+                </div>
+              </article>
+            </div>
+            <a href="#" class="button" target="_self">更多音乐</a>
+          </section>
+
+          <!-- Section -->
+          <section>
+            <header class="major">
+              <h2 id="moreVideo">视频专栏</h2>
+            </header>
+            <div class="posts">
+              <article v-for="item in dataList.more_video" key="id">
+                <a :href="item.url" class="image"
+                  ><img :src="item.img" alt=""
+                /></a>
+                <h3>{{item.title}}</h3>
+                <p>{{item.content}}</p>
+                <ul class="actions">
+                  <li><a :href="item.url" class="button">播放</a></li>
+                </ul>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div id="sidebar">
+        <div class="inner">
+          <!-- Search -->
+          <section id="search" class="alt">
+            <form method="post" action="#">
+              <input
+                type="text"
+                name="query"
+                id="query"
+                placeholder="主内分享，请勿传播"
+                disabled
+              />
+            </form>
+          </section>
+
+          <!-- Menu -->
+          <nav id="menu">
+            <header class="major">
+              <h2>目录</h2>
+            </header>
+            <ul>
+              <li><a href="index.html" target="_self">主页</a></li>
+              <!-- <li><a href="generic.html">我爱音乐</a></li>
+                <li><a href="elements.html">Elements</a></li> -->
+                <li><a href="#" target="_self">音乐专栏</a></li>
+                <li><a href="#moreVideo" target="_self">视频专栏</a></li>
+              
+            </ul>
+          </nav>
+
+          <!-- Section -->
+          <section>
+            <header class="major">
+              <h2>最新发布</h2>
+            </header>
+            <div class="mini-posts">
+              <article>
+                <a
+                  href="https://vichien-public.oss-cn-guangzhou.aliyuncs.com/xiaoyangzhijia/video/%E8%B5%9E%E7%BE%8EMV/yhhqjw.mp4"
+                  class="image"
+                  ><img
+                    src="https://vichien-public.oss-cn-guangzhou.aliyuncs.com/xiaoyangzhijia/video/%E8%B5%9E%E7%BE%8EMV/poster/yhhqjw.jpg"
+                    alt=""
+                /></a>
+                <p>耶和华亲近我</p>
+              </article>
+              <article>
+                <a
+                  href="https://vichien-public.oss-cn-guangzhou.aliyuncs.com/xiaoyangzhijia/video/%E8%B5%9E%E7%BE%8EMV/How%20Could%20it%20Be.mp4"
+                  class="image"
+                  ><img
+                    src="https://vichien-public.oss-cn-guangzhou.aliyuncs.com/xiaoyangzhijia/video/%E8%B5%9E%E7%BE%8EMV/poster/hded.jpg"
+                    alt=""
+                /></a>
+                <p>何等恩典</p>
+              </article>
+            </div>
+            <ul class="actions">
+              <li>
+                <a href="#moreVideo" class="button" target="_self">更多视频</a>
+              </li>
+            </ul>
+          </section>
+
+          <!-- Section -->
+          <section>
+            <header class="major">
+              <h2>联系我们</h2>
+            </header>
+            <p>
+              如果您需要我帮忙祷告，或者想与我分享一些新鲜事的话，欢迎随时与我联系
+            </p>
+            <ul class="contact">
+              <li class="icon solid fa-envelope">
+                <a href="mailto:chuanyangme@gmail.com" target="_self"
+                  >chuanyangme@gmail.com</a
+                >
+              </li>
+              <!-- <li class="icon solid fa-phone">(000) 000-0000</li>
+											  <li class="icon solid fa-home">1234 Somewhere Road #8254<br />
+											  Nashville, TN 00000-0000</li> -->
+            </ul>
+          </section>
+
+          <!-- Footer -->
+          <footer id="footer">
+            <p class="copyright">&copy; redesigned by ChuanyangChen.</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+
+<script>
+  const App = {
+    mounted() {
+      initJQuery(jQuery);
+      fetch(
+        "https://console-mock.apipost.cn/app/mock/project/67143e7e-aa2c-45e3-acb6-f5c9aa58d095/app/getSongs"
+      )
+        .then((response) => response.json())
+        .then((json) => {
+          this.dataList = json.data;
+        })
+        .catch((err) => console.log("Request Failed", err));
+    },
+    data() {
+      return {
+        dataList: {},
+      };
+    },
+  };
+
+  Vue.createApp(App).mount("#wrapper");
+</script>
